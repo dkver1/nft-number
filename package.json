@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "truffle": "^5.2.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.4.1"
+  }
 }
