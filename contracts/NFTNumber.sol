@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 // Inspired/Copied fromm BGANPUNKS V2 (bastardganpunks.club)
-contract Chubbies is ERC721, Ownable {
+contract NFTNumber is ERC721, Ownable {
     using SafeMath for uint256;
     uint public constant MAX_CHUBBIES = 10000;
     bool public hasSaleStarted = false;
@@ -15,8 +15,7 @@ contract Chubbies is ERC721, Ownable {
     // The IPFS hash for all Chubbies concatenated *might* stored here once all Chubbies are issued and if I figure it out
     string public METADATA_PROVENANCE_HASH = "";
 
-    constructor(string memory baseURI) ERC721("NFT Number","NFTNUM")  {
-        setBaseURI(baseURI);
+    constructor() ERC721("NFT Number","NFTNUM") {
     }
     
     function tokensOfOwner(address _owner) external view returns(uint256[] memory ) {
